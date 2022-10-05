@@ -8,3 +8,10 @@
 section {
   padding-top: 5rem;
 }
+.galler-img {
+  width: 100%;
+}
+
+#gallery .row > * {
+  padding: 0;
+}
