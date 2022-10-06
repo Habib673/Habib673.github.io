@@ -15,3 +15,85 @@ section {
 #gallery .row > * {
   padding: 0;
 }
+
+/* My gambar section*/
+.gambar-box {
+  position: relative;
+  background-color: blue;
+  border-radius: 10px;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+.gambar-box::before {
+  content: 'MY';
+  position: absolute;
+  color: #fff;
+  font-size: 6em;
+  font-weight: bold;
+  font-style: italic;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+.gambar-box:hover::before {
+  opacity: 0.2;
+}
+
+.gambar-box::after {
+  content: 'GAMBAR';
+  position: absolute;
+  color: #fff;
+  font-size: 4em;
+  font-weight: bold;
+  font-style: italic;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+.gambar-box:hover:after {
+  opacity: 0.2;
+}
+
+.gambard-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  opacity: 0;
+  transform: translate3d(0, 0, 20px);
+  transition: 0.5s;
+}
+.gambar-box:hover .gambard-name {
+  top: 20px;
+  opacity: 1;
+}
+
+.gambar-detail-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 50px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.gambar-box:hover .gambar-detail-button {
+  opacity: 1;
+  bottom: 20px;
+}
+.gambar-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 80px);
+  max-width: 210px;
+  transition: 0.5s;
+}
+.gambar-box:hover .gambar-img {
+  transform: translate3d(-50%, -50%) rotate(-20deg) scale(1.3);
+}
